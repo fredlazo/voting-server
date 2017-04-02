@@ -1,0 +1,35 @@
+
+Designing the Application State Tree:
+
+    "The main difference is that in Redux, the application state is all stored
+    in one single tree structure. In other words, everything there is to know
+    about your application's state is stored in one data structure formed out
+    of maps and arrays.''
+
+    This seems like a reasonable design to get started with. There are many different ways to design the state for these requirements, and this might not be the optimal one. But that doesn't really matter. It just needs to be good enough to get started. The important thing is that we have formed a concrete idea of how the application will carry out its duties. That's before we've even thought about any of the code!
+
+Project Setup:
+
+
+mkdir voting-server
+cd voting-server
+npm init -y
+
+npm install --save-dev babel-core babel-cli babel-preset-es2015
+
+npm install --save-dev mocha chai
+
+add this to package.json:
+
+"scripts": {
+  "test": "mocha --compilers js:babel-core/register --recursive",
+  "test:watch": "npm run test -- --watch"
+}
+
+"babel": {
+  "presets": ["es2015"]
+}
+
+Make sure you create index.js outside of src folder
+
+{startServer} has to be in braces in index.js (It changes)
